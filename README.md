@@ -76,14 +76,27 @@ O projeto será desenvolvido utilizando principalmente:
 
 A aplicação será organizada utilizando arquitetura em camadas, separando as responsabilidades entre Model, Repository, Service e Controller.
 
+## Cronograma
+
+| Data | Atividade | Responsável |
+|---|---|---|
+| __/__/2026 | Definição do tema, problema e ODS | Equipe |
+| __/__/2026 | Levantamento dos requisitos funcionais | Equipe |
+| __/__/2026 | Elaboração do Diagrama de Classes | Equipe |
+| __/__/2026 | Elaboração do DER | Equipe |
+| __/__/2026 | Organização do repositório no GitHub | Equipe |
+| __/__/2026 | Desenvolvimento do CRUD | Equipe |
+| __/__/2026 | Integração com banco de dados | Equipe |
+| __/__/2026 | Testes e entrega final | Equipe |
+
 ## Estrutura do Repositório
 
 ```text
 sistema-doacoes/
 ├── src/
 ├── docs/
-│   ├── diagrama-classes.png
-│   ├── der.png
+│   ├── Diagrama-Caso-de-Uso.png
+│   ├── DER.png
 │   └── documentacao.pdf
 ├── database/
 └── README.md
