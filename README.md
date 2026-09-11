@@ -80,14 +80,14 @@ A aplicação será organizada utilizando arquitetura em camadas, separando as r
 
 | Data | Atividade | Responsável |
 |---|---|---|
-| __/__/2026 | Definição do tema, problema e ODS | Equipe |
-| __/__/2026 | Levantamento dos requisitos funcionais | Equipe |
-| __/__/2026 | Elaboração do Diagrama de Classes | Equipe |
-| __/__/2026 | Elaboração do DER | Equipe |
-| __/__/2026 | Organização do repositório no GitHub | Equipe |
-| __/__/2026 | Desenvolvimento do CRUD | Equipe |
-| __/__/2026 | Integração com banco de dados | Equipe |
-| __/__/2026 | Testes e entrega final | Equipe |
+| 29/08/2026 | Definição do tema, problema e ODS | Matheus |
+| 30/08/2026 | Levantamento e documentação dos requisitos | Matheus |
+| 05/09/2026 | Elaboração do Diagrama de Classes | André |
+| 05/09/2026 | Elaboração do DER | André |
+| 10/09/2026 | Organização do repositório no GitHub | Matheus |
+| 30/10/2026 | Desenvolvimento do CRUD | Cauã |
+| 31/10/2026 | Integração e testes com banco de dados | Cauã |
+| 06/11/2026 | Revisão e entrega final | André |
 
 ## Estrutura do Repositório
 
