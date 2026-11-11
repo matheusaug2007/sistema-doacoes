@@ -87,7 +87,7 @@ A aplicação será organizada utilizando arquitetura em camadas, separando as r
 | 10/09/2026 | Organização do repositório no GitHub | Matheus |
 | 30/10/2026 | Desenvolvimento do CRUD | Cauã |
 | 31/10/2026 | Integração e testes com banco de dados | Cauã |
-| 06/11/2026 | Revisão e entrega final | André |
+| 13/11/2026 | Revisão e entrega final | André |
 
 ## Estrutura do Repositório
 
