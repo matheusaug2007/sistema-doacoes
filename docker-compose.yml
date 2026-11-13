@@ -1,0 +1,36 @@
+# Ambiente local. As senhas abaixo são só para desenvolvimento; em produção, defina
+# DB_PASSWORD e DB_ROOT_PASSWORD no ambiente ou em um arquivo .env (que não vai para o Git).
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: doacoes
+      MYSQL_USER: doacoes
+      MYSQL_PASSWORD: ${DB_PASSWORD:-doacoes}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+      TZ: America/Sao_Paulo
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_0900_ai_ci
+    ports:
+      - "3306:3306"
+    volumes:
+      - dados-mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  app:
+    build: .
+    environment:
+      DB_URL: jdbc:mysql://db:3306/doacoes
+      DB_USER: doacoes
+      DB_PASSWORD: ${DB_PASSWORD:-doacoes}
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  dados-mysql:
