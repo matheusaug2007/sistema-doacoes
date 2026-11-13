@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: maven
+      # O chmod cobre o caso de o mvnw ter sido commitado a partir do Windows, sem permissão de execução.
+      - name: Compilar e testar
+        run: chmod +x mvnw && ./mvnw -B verify

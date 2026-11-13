@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: sistema-doacoes
+  datasource:
+    # Os valores padrão casam com o docker-compose.yml; em produção, defina as variáveis de ambiente.
+    url: ${DB_URL:jdbc:mysql://localhost:3306/doacoes}
+    username: ${DB_USER:doacoes}
+    password: ${DB_PASSWORD:doacoes}
+  jpa:
+    open-in-view: false
+    hibernate:
+      # O esquema é criado só pelo Flyway; o Hibernate apenas confere se as entidades batem com ele.
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_batch_fetch_size: 50
+  mvc:
+    format:
+      date: iso
+      date-time: iso
+  web:
+    locale: pt_BR
+    locale-resolver: fixed
+  data:
+    web:
+      pageable:
+        max-page-size: 100
+
+app:
+  # Fuso usado para decidir "hoje" nas regras de validade.
+  fuso-horario: America/Sao_Paulo
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

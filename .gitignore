@@ -1,0 +1,14 @@
+target/
+*.log
+CLAUDE.md
+
+# IDEs
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Segredos locais
+.env
